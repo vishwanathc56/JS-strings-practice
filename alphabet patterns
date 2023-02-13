@@ -1,0 +1,16 @@
+// print abcd -->  ABbCccDddd 
+
+function convertString(str) {
+  let result = "";
+ 
+  for (let i = 0; i < str.length; i++) {
+    let char = str[i];
+     console.log(char.toUpperCase() + char.toLowerCase().repeat(i)); 
+    result += char.toUpperCase() + char.toLowerCase().repeat(i);
+  }
+  return result;
+}
+
+let input = "abcd";
+let output = convertString(input);
+console.log(output); // ABbCccDddd
