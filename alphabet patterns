@@ -1,3 +1,12 @@
+ASCII value is a number that represents the character. For example, the letter A is represented by 65, Z is 90, and so on.
+
+We will also use String.fromCharCode() to convert the number to a letter.
+Ex: 
+for(let i = 65; i <= 90; i++){
+  console.log(String.fromCharCode(i)); //  prints A to Z
+}
+
+
 // print abcd -->  ABbCccDddd 
 
 function convertString(str) {
