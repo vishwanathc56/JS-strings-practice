@@ -24,7 +24,7 @@ let input = "abcd";
 let output = convertString(input);
 console.log(output); // ABbCccDddd
 
-// ABCD as pyramid structure
+// ABCDE as pyramid structure
 
 let n = 5; // you can take input from prompt or change the value
 let string = "";
@@ -33,6 +33,20 @@ for (let i = 1; i <= n; i++) {
   // printing characters
   for (let j = 0; j < i; j++) {
     string += String.fromCharCode(j + 65);
+  }
+  string += "\n";
+}
+console.log(string);
+
+// ABCDE as pyramid structure with repeating alphabet
+
+let n = 5;
+let string = "";
+// External loop
+for (let i = 1; i <= n; i++) {
+  // printing characters
+  for (let j = 0; j < i; j++) {
+    string += String.fromCharCode((i - 1) + 65);
   }
   string += "\n";
 }
