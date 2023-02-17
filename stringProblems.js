@@ -27,3 +27,27 @@ function findLongestWord(str) {
 console.log(findLongestWord("The quick brown fox jumps over the lazy dog")); // Output: 5
 
 //-----------------------------------------------------------------------------------------------------------------------------------
+
+3) Write a function called isPalindrome that takes a string as an argument and returns true if the string is a palindrome, and false otherwise. A palindrome is a word or phrase that is spelled the same way forwards and backwards. For example, "racecar" and "level" are palindromes.
+
+function isPalindrome(str) {
+  const reversedStr = str.split("").reverse().join("");
+  return str === reversedStr;
+}
+
+console.log(isPalindrome("racecar")); // Output: true
+console.log(isPalindrome("level")); // Output: true
+console.log(isPalindrome("hello")); // Output: false
+
+//              alternative solution
+
+function isPalindrome(str) {
+  for (let i = 0; i < str.length / 2; i++) {
+    if (str[i] !== str[str.length - 1 - i]) {
+      return false;
+    }
+  }
+  return true;
+}
+
+
