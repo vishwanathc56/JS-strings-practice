@@ -145,4 +145,36 @@ function findLongestWord(str) {
 console.log(wird("hello world"));
 
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
-8)
+8)Write a function called countOccurrences that takes a string and a target substring as arguments, and returns the number of times the target substring appears in the string. For example, if the input string is "hello world" and the target substring is "o", the output should be 2, because "o" appears twice in "hello world".
+
+function wird(str, target){
+    const targt = target;
+    const words = str.split("");
+    //console.log("words", words)
+    let count = 0;
+    for(let i=0;i<words.length;i++){
+        if(words[i]===targt){
+            count++;
+        }
+    }
+    return count;  
+}
+
+//                              alternative
+
+function countOccurrences(str, target) {
+  let count = 0;
+  let index = str.indexOf(target);
+  
+  while (index !== -1) {
+    count++;
+    index = str.indexOf(target, index + 1);
+  }
+  
+  return count;
+}
+
+console.log(countOccurrences("hello world", "o")); // Output: 2
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+9)
