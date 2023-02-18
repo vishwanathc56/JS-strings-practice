@@ -51,3 +51,21 @@ function isPalindrome(str) {
 }
 
 
+4)Write a function called countVowels that takes a string as an argument and returns the number of vowels in the string. Vowels are the letters "a", "e", "i", "o", and "u". For example, if the input is "hello world", the output should be 3 (the number of vowels in the string).
+
+function countVowels(str) {
+  const vowels = "aeiouAEIOU";
+  let count = 0;
+  
+  for (let i = 0; i < str.length; i++) {
+    if (vowels.indexOf(str[i]) !== -1) {
+      count++;
+    }
+  }
+  
+  return count;
+}
+
+console.log(countVowels("hello world")); // Output: 3
+
+
