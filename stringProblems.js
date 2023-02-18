@@ -86,3 +86,33 @@ function countVowels(str) {
 
 console.log(countVowels("hello world")); // Output: 3
 
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+5)Write a function called reverseWords that takes a string as an argument and returns the string with the words reversed. A word is defined as a sequence of non-space characters. For example, if the input is "hello world", the output should be "world hello".
+
+function reverseWords(str) {
+  const words = str.split(" ");
+  const reversedWords = words.reverse();
+  const reversedStr = reversedWords.join(" ");
+  return reversedStr;
+}
+
+console.log(reverseWords("hello world")); // Output: "world hello"
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+6)Write a function called capitalizeFirstLetter that takes a string as an argument and returns the string with the first letter of each word capitalized. A word is defined as a sequence of non-space characters. For example, if the input is "hello world", the output should be "Hello World".
+
+function capitalizeFirstLetter(str) {
+  const words = str.split(" ");
+  
+  for (let i = 0; i < words.length; i++) {
+    words[i] = words[i][0].toUpperCase() + words[i].slice(1);
+  }
+  
+  return words.join(" ");
+}
+
+console.log(capitalizeFirstLetter("hello world")); // Output: "Hello World"
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
