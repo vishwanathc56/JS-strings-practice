@@ -50,6 +50,7 @@ function isPalindrome(str) {
   return true;
 }
 
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 4)Write a function called countVowels that takes a string as an argument and returns the number of vowels in the string. Vowels are the letters "a", "e", "i", "o", and "u". For example, if the input is "hello world", the output should be 3 (the number of vowels in the string).
 
