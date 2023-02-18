@@ -114,5 +114,35 @@ function capitalizeFirstLetter(str) {
 console.log(capitalizeFirstLetter("hello world")); // Output: "Hello World"
 
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+7)Write a function called findLongestWord that takes a string as an argument and returns the length of the longest word in the string. A word is defined as a sequence of non-space characters. For example, if the input is "hello world", the output should be 5, because "hello" is the longest word in the string.
 
+function word(arr){
+    const words = arr.split(" ");
+   let longest =0;
+   for(let i=0;i<words.length;i++){
+       if(longest<words[i].length){
+       longest= words[i].length;
+       }
+   }
+   return longest;
+}
 
+//                                                  alternative
+
+function findLongestWord(str) {
+  const words = str.split(" ");
+  let maxLength = 0;
+  
+  for (let i = 0; i < words.length; i++) {
+    if (words[i].length > maxLength) {
+      maxLength = words[i].length;
+    }
+  }
+  
+  return maxLength;
+}
+
+console.log(wird("hello world"));
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+8)
