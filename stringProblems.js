@@ -177,4 +177,32 @@ function countOccurrences(str, target) {
 console.log(countOccurrences("hello world", "o")); // Output: 2
 
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
-9)
+9)Write a function called isAnagram that takes two strings as arguments and returns true if the two strings are anagrams, and false otherwise. Anagrams are words or phrases formed by rearranging the letters of a different word or phrase, using all the original letters exactly once. 
+For example, "listen" and "silent" are anagrams, while "hello" and "world" are not.
+
+function isAnagram(str1, str2) {
+  if (str1.length !== str2.length) {
+    return false;
+  }
+
+  const charCount = {};
+
+  for (let i = 0; i < str1.length; i++) {
+    const char = str1[i];
+    charCount[char] = (charCount[char] || 0) + 1;
+  }
+
+  for (let i = 0; i < str2.length; i++) {
+    const char = str2[i];
+    if (!charCount[char]) {
+      return false;
+    }
+    charCount[char]--;
+  }
+
+  return true;
+}
+
+console.log(isAnagram("listen", "silent")); // Output: true
+console.log(isAnagram("hello", "world")); // Output: false
+
