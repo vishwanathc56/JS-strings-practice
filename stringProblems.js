@@ -221,3 +221,6 @@ function isAnagram(str1, str2) {
 
 console.log(isAnagram("listen", "silent")); // Output: true
 console.log(isAnagram("hello", "world")); // Output: false
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+10)
