@@ -268,5 +268,19 @@ console.log(isAnagram("hello", "world")); // Output: false
     }
 
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
-12)
+12)Write a function called truncateString that takes two arguments: a string and a number. The function should truncate the string to the specified length and add an ellipsis ("...") to the end of the truncated string. 
+  If the length of the string is less than or equal to the specified length, the original string should be returned unmodified. For example, if the input string is "The quick brown fox jumps over the lazy dog" and the input number is 20, the function should return "The quick brown fox...".
      
+  function truncateString(str, num) {
+    if (str.length <= num) {
+      return str;
+    }
+    return str.slice(0, num) + "...";
+  }
+
+  console.log(truncateString("The quick brown fox jumps over the lazy dog", 20)); // Output: "The quick brown fox..."
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+13)
+
+
