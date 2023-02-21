@@ -261,4 +261,12 @@ console.log(isAnagram("hello", "world")); // Output: false
 
     console.log(removeDuplicates(["apple", "banana", "cherry", "apple", "banana"])); // Output: ["apple", "banana", "cherry"]
 
+     //                    alternative
+    
+    function removeDuplicates(arr) {
+      return [...new Set(arr)];
+    }
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+12)
      
