@@ -287,7 +287,39 @@ console.log(isAnagram("hello", "world")); // Output: false
   console.log(truncateString("The quick brown fox jumps over the lazy dog", 20)); // Output: "The quick brown fox..."
 
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
-13) 
+13) Write a function called reverseWords that takes a string as an input and returns a string with the order of the words reversed, but the letters within each word should be in the same order as they were in the original string. 
+    For example, if the input string is "The quick brown fox", the function should return "ehT kciuq nworb xof".
+    
+    function reverseWords(str) {
+      return str.split(" ").map(word => word.split("").reverse().join("")).join(" ");
+    } 
+
+    //                          alternative 
+
+    function reverseWords(str) {
+      let words = str.split(" ");
+      let reversedWords = [];
+
+      for (let i = 0; i < words.length; i++) {
+        let word = words[i];
+        let reversedWord = "";
+
+        for (let j = word.length - 1; j >= 0; j--) {
+          reversedWord += word[j];
+        }
+
+        reversedWords.push(reversedWord);
+      }
+
+      return reversedWords.join(" ");
+    }
+
+    console.log(reverseWords("The quick brown fox")); // Output: "ehT kciuq nworb xof"
+
+
+    console.log(reverseWords("The quick brown fox")); // Output: "ehT kciuq nworb xof"
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+14)
 
     
 
