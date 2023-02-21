@@ -234,3 +234,18 @@ console.log(isAnagram("hello", "world")); // Output: false
     console.log(reverseWords("the quick brown fox")); // Output: "fox brown quick the"
 
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+  11)Write a function called removeDuplicates that takes an array of strings as an argument and returns a new array with all duplicate strings removed. 
+     For example, if the input array is ["apple", "banana", "cherry", "apple", "banana"], the function should return ["apple", "banana", "cherry"].
+     
+     function reverseWords(arr) {
+      let unique=[];
+      arr.forEach((item)=>{
+        if(unique.indexOf(item)==-1){
+            unique.push(item);
+        }
+      })
+      return unique;
+     }
+
+    console.log(reverseWords(["apple", "banana", "cherry", "apple", "banana"]));
+     
