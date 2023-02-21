@@ -278,9 +278,19 @@ console.log(isAnagram("hello", "world")); // Output: false
     return str.slice(0, num) + "...";
   }
 
+  //          alternative 
+
+   function truncateString(str, num) {
+      return str.length <= num ? str : str.slice(0, num) + "...";
+   }
+
   console.log(truncateString("The quick brown fox jumps over the lazy dog", 20)); // Output: "The quick brown fox..."
 
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
-13)
+13) 
+
+    
+
+   
 
 
