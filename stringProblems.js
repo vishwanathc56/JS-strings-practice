@@ -352,6 +352,13 @@ console.log(isAnagram("hello", "world")); // Output: false
     console.log(removeDuplicates("Programming is awesome")); // Output: "Progaminwes"
     console.log(removeDuplicates("122333444455555666666777777788888888999999999")); // Output: "123456789"
 
+//          alternative 
+
+    function removeDuplicates(str) {
+      return [...new Set(str)].join("");
+    }
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+15)
 
     
 
