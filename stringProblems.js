@@ -222,6 +222,25 @@ function isAnagram(str1, str2) {
 console.log(isAnagram("listen", "silent")); // Output: true
 console.log(isAnagram("hello", "world")); // Output: false
 
+//                            alternative 
+
+function isAnagram(str1, str2) {
+  // Remove all non-alphabetic characters and convert to lowercase
+  str1 = str1.replace(/[^a-zA-Z]/g, "").toLowerCase();
+  str2 = str2.replace(/[^a-zA-Z]/g, "").toLowerCase();
+
+  // Sort the letters of each string
+  str1 = str1.split("").sort().join("");
+  str2 = str2.split("").sort().join("");
+
+  // Compare the sorted strings
+  return str1 === str2;
+}
+
+console.log(isAnagram("silent", "listen")); // Output: true
+console.log(isAnagram("hello", "world")); // Output: false
+
+
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
 10) Write a function called reverseWords that takes a string as an argument and returns a new string with the words in reverse order. 
     For example, if the input string is "the quick brown fox", the function should return "fox brown quick the".
