@@ -338,7 +338,20 @@ console.log(isAnagram("hello", "world")); // Output: false
 
     console.log(reverseWords("The quick brown fox")); // Output: "ehT kciuq nworb xof"
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
-14)
+14) Write a function called removeDuplicates that takes a string as input and returns a new string with all duplicate characters removed.
+    For example, if the input string is "Hello, world!", the function should return "Helo, wrd!".
+    
+    function removeDuplicates(str) {
+      return str
+        .split("")
+        .filter((char, index, array) => array.indexOf(char) === index)
+        .join("");
+    }
+
+    console.log(removeDuplicates("Hello, world!")); // Output: "Helo, wrd!"
+    console.log(removeDuplicates("Programming is awesome")); // Output: "Progaminwes"
+    console.log(removeDuplicates("122333444455555666666777777788888888999999999")); // Output: "123456789"
+
 
     
 
