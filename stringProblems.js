@@ -358,9 +358,43 @@ console.log(isAnagram("hello", "world")); // Output: false
       return [...new Set(str)].join("");
     }
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
-15)
+15) Check if string contains spaces in JS 
 
+     Method-1: Use indexOf method 
      
+      const sentence =
+      "The water levels across the earth, and that's due to an increase in rain centimetres and worsening climae change and maybe because due to ice melting to water too (who knows)";
+      const search = "water";
+      const indexOfSearchWord = sentence.indexOf(search);
+      const SecondIndexOfSearchWord = sentence.indexOf(search, indexOfSearchWord + 1);
+
+      console.log(`Index of the first ${search} is ${indexOfSearchWord}`);            // Index of the first water is 4
+      console.log(`Index of the second ${search} is ${SecondIndexOfSearchWord}`);     // Index of the second water is 153
+      
+      const sentence = "Well, it is good";
+      const sentence1 = "Welcome";
+
+      function hasSpace(sentence) {
+          return sentence.indexOf(" ") >= 0;
+      }
+
+      console.log(hasSpace(sentence));        //true
+      console.log(hasSpace(sentence1));       //false
+  
+
+
+      Method-2: Use Regular Expressions 
+      
+      const sentence = " Well, it is good";
+      const sentence1 = "Welcome";
+
+      function hasSpace(sentence) {
+          return /\\s/g.test(sentence);
+      }
+
+      console.log(hasSpace(sentence));           //true
+      console.log(hasSpace(sentence1));          //false
+
 
    
 
