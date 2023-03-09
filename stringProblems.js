@@ -394,7 +394,8 @@ console.log(isAnagram("hello", "world")); // Output: false
 
       console.log(hasSpace(sentence));           //true
       console.log(hasSpace(sentence1));          //false
-
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+16)
 
    
 
